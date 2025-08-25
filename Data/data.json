@@ -1,0 +1,24 @@
+{
+  "scales": [
+    {
+      "id": "framingham",
+      "name": "FRAMINGHAM",
+      "title": "FRAMINGHAM ESCALA",
+      "fields": [
+        { "label": "Fiebre", "type": "checkbox", "min": 0, "max": 10 },
+        { "label": "Pulso", "type": "number" },
+        { "label": "Dolor", "type": "checkbox", "min": 0, "max": 5 }
+      ]
+    },
+    {
+      "id": "timi",
+      "name": "TIMI",
+      "title": "TIMI ESCALA",
+      "fields": [
+        { "label": "Edad", "type": "number" },
+        { "label": "Factores de riesgo", "type": "checkbox" },
+        { "label": "Angina", "type": "checkbox", "min": 0, "max": 3 }
+      ]
+    }
+  ]
+}

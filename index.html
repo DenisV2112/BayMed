@@ -1,194 +1,136 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Medical Website</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<style>
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-        .material-symbols-outlined {
-            font-variation-settings:
-            'FILL' 0,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 24
-        }
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-        }
-        .animate-pulse-heart {
-            animation: pulse 1.5s infinite;
-        }
-    </style>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Medical Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+    .animate-pulse-heart {
+      animation: pulse 1.5s infinite;
+    }
+svg {
+  overflow: visible;
+}
+svg path#line {
+  fill: none;
+  stroke: #e00000;
+  stroke-width: 2;
+  stroke-linecap: butt;
+  stroke-linejoin: round;
+  stroke-miterlimit: 4;
+  stroke-dasharray:none;
+  stroke-opacity: 1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 4s linear infinite;
+}
+svg path#heart {
+  transform-origin: 50% 50%;
+  animation: blink 4s linear infinite;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  60% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  85% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.0);
+  }
+}
+  </style>
 </head>
 <body class="bg-gray-100">
-<div class="flex h-screen">
-<aside class="w-20 bg-white flex flex-col items-center py-6">
-<div class="flex items-center justify-center mb-10">
-<span class="material-symbols-outlined text-3xl text-blue-600">local_hospital</span>
-</div>
-<nav class="flex flex-col items-center space-y-8 flex-grow">
-<a class="bg-blue-100 text-blue-600 p-3 rounded-lg" href="#">
-<span class="material-symbols-outlined">home</span>
+<div class="flex flex-col lg:flex-row min-h-screen">
+  <!-- Sidebar -->
+  <aside class="w-full lg:w-20 bg-gray flex flex-row lg:flex-col items-center justify-between p-0  ">
+    <img class="max-w-[60px] lg:max-w-[100px]" src="../Frontend/src/assets/img/logo/baymed_logo.png" alt="Logo" />
+    <nav class="flex flex-row lg:flex-col items-center space-x-6 lg:space-x-0 lg:space-y-9 justify-around flex-grow">
+      <a class="hover:bg-white text-gray-500 p-3 rounded-lg" href="#/">
+        <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" version="1.0" viewBox="0.0 -2.8 500.0 480.5" zoomAndPan="magnify" style="fill: rgb(0, 0, 0);" original_string_length="904" width="21.79380015243671px" height="20.96167323752549px"><g><g id="__id0_s65e06r4fw" style="fill: rgb(115, 115, 115);"><path d="M411.7,443.1c0,6.4-5.2,11.5-11.5,11.5h-80.8c-6.4,0-11.5-5.2-11.5-11.5V323.3c0-19.1-15.5-34.6-34.6-34.6 h-46.2c-19.1,0-34.6,15.5-34.6,34.6v119.8c0,6.4-5.2,11.5-11.5,11.5H99.9c-6.4,0-11.5-5.2-11.5-11.5l0-230.9H65.3l0,230.9 c0,19.1,15.5,34.6,34.6,34.6h80.8c19.1,0,34.6-15.5,34.6-34.6V323.3c0-6.4,5.2-11.5,11.5-11.5h46.2c6.4,0,11.5,5.2,11.5,11.5 v119.8c0,19.1,15.5,34.6,34.6,34.6h80.8c19.1,0,34.6-15.5,34.6-34.6l0-230.9h-23.1L411.7,443.1z" style="fill: inherit;"/><path d="M272.5,8.4c-13.1-11.2-32-11.2-45.1,0L0,203.4l15,17.5l227.5-195c4.4-3.7,10.7-3.7,15,0l227.5,195l15-17.5 L272.5,8.4z" style="fill: inherit;"/></g></g></svg>
+      </a>
+      <a class="text-gray-500" href="#/guide">
+  <span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'wght' 200;">
+    stethoscope
+  </span>
 </a>
-<a class="text-gray-500" href="#">
-<span class="material-symbols-outlined">stethoscope</span>
-</a>
-<a class="text-gray-500" href="#">
-<span class="material-symbols-outlined">medication</span>
-</a>
-<a class="text-gray-500" href="#">
-<span class="material-symbols-outlined">mail</span>
-</a>
-</nav>
-<div class="mt-auto">
-<a class="text-red-500" href="#">
-<span class="material-symbols-outlined">logout</span>
-</a>
-</div>
-</aside>
-<main class="flex-1 p-6">
-<header class="flex justify-between items-center mb-8">
-<h1 class="text-xl font-semibold">BayMed</h1>
-<div class="w-10">Sol</div>
-</header>
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-<div class="lg:col-span-1 bg-white p-6 rounded-2xl shadow flex flex-col">
-<h2 class="font-semibold text-lg mb-4 text-center">Welcome</h2>
-<div class="flex-grow flex justify-center items-center">
-<div class="relative w-64 h-64">
-<div class="absolute inset-0 bg-red-100 rounded-full animate-ping opacity-50"></div>
-<img alt="Anatomical heart illustration" class="w-full h-full object-contain animate-pulse-heart" src="./ChatGPT Image 20 ago 2025, 20_30_23.png"/>
-</div>
-</div>
-</div>
-<div class="lg:col-span-2 bg-white p-6 rounded-2xl shadow">
-<h2 class="font-semibold text-lg mb-4">Your last scales</h2>
-<div class="grid grid-cols-2 gap-4">
-<div class="bg-red-50 p-4 rounded-xl flex items-start">
-<div class="bg-red-100 p-2 rounded-lg mr-4">
-<span class="material-symbols-outlined text-red-500">bloodtype</span>
-</div>
-<div>
-<p class="text-sm text-gray-500">Blood Scale</p>
-<p class="font-bold text-lg">100/70</p>
-<p class="text-xs text-gray-400">100% presice   </p>
-</div>
-</div>
-<div class="bg-green-50 p-4 rounded-xl flex items-start">
-<div class="bg-green-100 p-2 rounded-lg mr-4">
-<span class="material-symbols-outlined text-green-500">glucose</span>
-</div>
-<div>
-<p class="text-sm text-gray-500">Glucose Level</p>
-<p class="font-bold text-lg">78-92</p>
-<p class="text-xs text-gray-400">On higher than last week</p>
-</div>
-</div>
-<div class="bg-purple-50 p-4 rounded-xl flex items-start">
-<div class="bg-purple-100 p-2 rounded-lg mr-4">
-<span class="material-symbols-outlined text-purple-500">monitor_heart</span>
-</div>
-<div>
-<p class="text-sm text-gray-500">Heart Scale</p>
-<p class="font-bold text-lg">78 bmp</p>
-<p class="text-xs text-gray-400">2% faster than last week</p>
-</div>
-</div>
-<div class="bg-pink-50 p-4 rounded-xl flex items-start">
-<div class="bg-pink-100 p-2 rounded-lg mr-4">
-<span class="material-symbols-outlined text-pink-500">science</span>
-</div>
-<div>
-<p class="text-sm text-gray-500">Blood Calculator</p>
-<p class="font-bold text-lg">9,500/ml</p>
-<p class="text-xs text-gray-400">Calculate ml and make diagnosis</p>
-</div>
-</div>
-</div>
-</div>
-<div class="lg:col-span-2 bg-white p-6 rounded-2xl shadow">
-<div class="flex justify-between items-center mb-4">
-<div>
-<h2 class="font-semibold text-lg">Heart Rate</h2>
-<p class="text-sm text-gray-500">17-23 January 2021</p>
-</div>
-<div class="text-red-500 font-semibold text-sm">75 bmp <span class="text-gray-400 font-normal">Baymed</span></div>
-</div>
-<div class="h-40">
-<img alt="Heart rate graph showing fluctuations over a week" class="w-full h-full object-contain" src="./image.png"/>
-</div>
-</div>
-<div class="lg:col-span-1 bg-white p-6 rounded-2xl shadow">
-<div class="flex justify-between items-center mb-4">
-<h2 class="font-semibold text-lg">Documents</h2>
-<a class="text-sm text-blue-600" href="#">View all</a>
-</div>
-<div class="space-y-4">
-<div class="flex items-center">
-<div class="bg-red-100 p-2 rounded-lg mr-4">
-<span class="material-symbols-outlined text-red-500">description</span>
-</div>
-<div class="flex-grow">
-<p class="font-medium">Blood Status Report.pdf</p>
-</div>
-<button class="text-gray-400">
-<span class="material-symbols-outlined">more_horiz</span>
-</button>
-</div>
-<div class="flex items-center">
-<div class="bg-blue-100 p-2 rounded-lg mr-4">
-<span class="material-symbols-outlined text-blue-500">description</span>
-</div>
-<div class="flex-grow">
-<p class="font-medium">Heart Rate Report.pdf</p>
-</div>
-<button class="text-gray-400">
-<span class="material-symbols-outlined">more_horiz</span>
-</button>
-</div>
-<div class="flex items-center">
-<div class="bg-green-100 p-2 rounded-lg mr-4">
-<span class="material-symbols-outlined text-green-500">description</span>
-</div>
-<div class="flex-grow">
-<p class="font-medium">Glucose Report.pdf</p>
-</div>
-<button class="text-gray-400">
-<span class="material-symbols-outlined">more_horiz</span>
-</button>
-</div>
-<div class="flex items-center">
-<div class="bg-pink-100 p-2 rounded-lg mr-4">
-<span class="material-symbols-outlined text-pink-500">description</span>
-</div>
-<div class="flex-grow">
-<p class="font-medium">Blood Count Report.pdf</p>
-</div>
-<button class="text-gray-400">
-<span class="material-symbols-outlined">more_horiz</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</main>
-<div class="fixed bottom-8 right-8">
-<button class="bg-white p-4 rounded-full shadow-lg">
-<span class="material-symbols-outlined text-2xl">auto_awesome</span>
-</button>
-</div>
-</div>
 
-</body></html>
+<a class="text-gray-500" href="#/scales">
+  <span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'wght' 200;">
+    medication
+  </span>
+</a>
+
+      <a class="text-gray-500" href="#/calculator">
+        <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" version="1.0" viewBox="333.4 331.2 1343.2 1347.6" zoomAndPan="magnify" style="fill: rgb(0, 0, 0);" original_string_length="2973" width="19.269670236270617px" height="19.341411376390752px"><g id="__id1_s65e06r4fw"><path d="M803.53,963.93H496.01c-89.66,0-162.61-72.95-162.61-162.61V493.81c0-89.66,72.95-162.61,162.61-162.61h307.51c89.66,0,162.61,72.95,162.61,162.61v307.51c0,89.66-72.95,162.61-162.61,162.61Z" style="fill: rgb(180, 180, 180);"/></g><g id="__id2_s65e06r4fw"><path d="M1513.99,963.93h-307.51c-89.66,0-162.61-72.95-162.61-162.61V493.81c0-89.66,72.95-162.61,162.61-162.61h307.51c89.66,0,162.61,72.95,162.61,162.61v307.51c0,89.66-72.95,162.61-162.61,162.61Z" style="fill: rgb(180, 180, 180);"/></g><g id="__id3_s65e06r4fw"><path d="M803.53,1678.79H496.01c-89.66,0-162.61-72.95-162.61-162.61v-307.51c0-89.66,72.95-162.61,162.61-162.61h307.51c89.66,0,162.61,72.95,162.61,162.61v307.51c0,89.66-72.95,162.61-162.61,162.61Z" style="fill: rgb(180, 180, 180);"/></g><g id="__id4_s65e06r4fw"><path d="M1513.99,1678.79h-307.51c-89.66,0-162.61-72.95-162.61-162.61v-307.51c0-89.66,72.95-162.61,162.61-162.61h307.51c89.66,0,162.61,72.95,162.61,162.61v307.51c0,89.66-72.95,162.61-162.61,162.61Z" style="fill: rgb(180, 180, 180);"/></g><g id="__id5_s65e06r4fw"><path d="M746.86,615.42l-63.61-.65,.65-63.61c.19-18.31-14.5-33.3-32.81-33.49-18.31-.19-33.3,14.5-33.49,32.81l-.65,63.61-63.61-.65c-.16,0-.31,0-.47,0-18.09,.06-32.83,14.66-33.02,32.81-.19,18.31,14.5,33.3,32.81,33.49l63.61,.65-.65,63.61c-.19,18.31,14.5,33.3,32.81,33.49,.16,0,.31,0,.47,0,18.09-.07,32.83-14.66,33.02-32.81l.65-63.61,63.61,.65c.16,0,.31,0,.47,0,18.09-.07,32.83-14.66,33.02-32.81,.19-18.31-14.5-33.3-32.81-33.49Z" style="fill: rgb(255, 255, 255);"/></g><g id="__id6_s65e06r4fw"><path d="M696.65,1362.51l45.06-44.9c12.97-12.92,13.01-33.91,.08-46.88-12.93-12.97-33.91-13.01-46.88-.08l-45.06,44.9-44.9-45.06c-.11-.11-.22-.22-.33-.33-12.95-12.64-33.69-12.56-46.55,.25-12.97,12.92-13,33.91-.08,46.88l44.9,45.06-45.06,44.9c-12.97,12.92-13.01,33.91-.08,46.88,.11,.11,.22,.22,.33,.33,12.95,12.64,33.69,12.56,46.55-.25l45.06-44.9,44.9,45.06c.11,.11,.22,.22,.33,.33,12.95,12.64,33.69,12.56,46.55-.25,12.97-12.92,13-33.91,.08-46.88l-44.9-45.06Z" style="fill: rgb(255, 255, 255);"/></g><g id="__id7_s65e06r4fw"><path d="M1447.7,680.57c-.16,0-.31,0-.47,0l-193.52-.33c-18.31-.03-33.12-14.9-33.09-33.21,.03-18.15,14.65-32.87,32.74-33.09,.16,0,.31,0,.47,0l193.52,.33c18.31,.03,33.12,14.9,33.09,33.21-.03,18.15-14.65,32.87-32.74,33.09Z" style="fill: rgb(255, 255, 255);"/></g><g id="__id8_s65e06r4fw" style="fill: rgb(255, 255, 255);"><path d="M1447.98,1391.36c-.14,0-.28,0-.42,0l-174.68-.56c-16.53-.05-29.92-14.94-29.91-33.24,0-18.15,13.18-32.85,29.51-33.05,.14,0,.28,0,.42,0l174.68,.56c16.53,.05,29.92,14.94,29.91,33.24,0,18.15-13.18,32.85-29.51,33.05Z" style="fill: inherit;"/><circle cx="1360.23" cy="1256.43" r="45.51" style="fill: inherit;"/><circle cx="1360.23" cy="1468.43" r="45.51" style="fill: inherit;"/></g></svg>
+      </a>
+    </nav>
+  </aside>
+   
+  <!-- Main content -->
+  <main id="app" class="flex flex-col flex-1 ">
+
+  </main>
+
+  <!-- Floating button -->
+  <div class="fixed bottom-8 right-8">
+    <button class="bg-white p-4 rounded-full shadow-lg">
+      <span class="material-symbols-outlined text-2xl">auto_awesome</span>
+    </button>
+  </div>
+</div>
+<script type="module" src="./Frontend/src/router/router.js" defer></script>
+</body>
+</html>
