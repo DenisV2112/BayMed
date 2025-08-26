@@ -1,6 +1,6 @@
 export default function Home() {
   return `
-     <header class="flex flex-col lg:flex-row justify-between items-center mb-4">
+     <header class=" flex flex-col lg:flex-row justify-between items-center mb-4">
       <div></div>
       <h1 id="page-title" class="text-4xl lg:text-6xl font-bold mb-4 lg:mb-0">BAYMED</h1>
       <div class="w-10 text-right">Sol</div>
