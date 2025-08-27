@@ -5,9 +5,22 @@
       "name": "FRAMINGHAM",
       "title": "FRAMINGHAM ESCALA",
       "fields": [
-        { "label": "Fiebre", "type": "checkbox", "min": 0, "max": 10 },
-        { "label": "Pulso", "type": "number" },
-        { "label": "Dolor", "type": "checkbox", "min": 0, "max": 5 }
+        {
+          "label": "Fiebre",
+          "type": "checkbox",
+          "min": 0,
+          "max": 10
+        },
+        {
+          "label": "Pulso",
+          "type": "number"
+        },
+        {
+          "label": "Dolor",
+          "type": "checkbox",
+          "min": 0,
+          "max": 5
+        }
       ]
     },
     {
@@ -15,61 +28,63 @@
       "name": "TIMI",
       "title": "TIMI ESCALA",
       "fields": [
-        { "label": "Edad", "type": "number" },
-        { "label": "Factores de riesgo", "type": "checkbox" },
-        { "label": "Angina", "type": "checkbox", "min": 0, "max": 3 }
+        {
+          "label": "Edad",
+          "type": "number"
+        },
+        {
+          "label": "Factores de riesgo",
+          "type": "checkbox"
+        },
+        {
+          "label": "Angina",
+          "type": "checkbox",
+          "min": 0,
+          "max": 3
+        }
       ]
     }
   ],
- "guides":[
-  {
-    "id": 1,
-    "title": "Cardiología",
-    "image": "./Frontend/src/assets/img/icons/heart.png",
-    "content": "Estudia las enfermedades del corazón y del sistema cardiovascular."
-  },
-  {
-    "id": 2,
-    "title": "Patología",
-    "image": "./Frontend/src/assets/img/icons/medical_tube_illustration.png",
-    "content": "Analiza las causas y efectos de enfermedades mediante muestras clínicas."
-  },
-  {
-    "id": 3,
-    "title": "Neurología",
-    "image": "./Frontend/src/assets/img/icons/brain_anatomi.png",
-    "content": "Se enfoca en el diagnóstico y tratamiento de trastornos del sistema nervioso."
-  },
-  {
-    "id": 4,
-    "title": "Histopatología",
-    "image": "./Frontend/src/assets/img/icons/mucroscope_illustration.webp",
-    "content": "Estudia los cambios en tejidos enfermos usando el microscopio."
-  },
-  {
-    "id": 5,
-    "title": "Gastroenterología",
-    "image": "./Frontend/src/assets/img/icons/pink_Intestinal_anatomy_illustration.png",
-    "content": "Especialidad médica centrada en el aparato digestivo y sus enfermedades."
-  },
-  {
-    "id": 6,
-    "title": "Bacteriología",
-    "image": "./Frontend/src/assets/img/icons/bacterys_illustration.png",
-    "content": "Rama de la microbiología que estudia las bacterias y sus efectos."
-  },
-  {
-    "id": 7,
-    "title": "Oftalmología",
-    "image": "./Frontend/src/assets/img/icons/eye_illustration.webp",
-    "content": "Se dedica al estudio y tratamiento de enfermedades del ojo."
-  },
-  {
-    "id": 8,
-    "title": "Citopatología",
-    "image": "./Frontend/src/assets/img/icons/thermometer_illustration.webp",
-    "content": "Estudia las células para detectar enfermedades como el cáncer."
-  }
-]
- 
+  "guides": [
+    {
+      "title": "Manejo clínico de la difteria",
+      "area": "Infecciones",
+      "url_pdf": "./Pdfs/Difteria.pdf",
+      "image": "./Frontend/src/assets/img/icons/diphtheria.png",
+      "description": "Esta guía, publicada por la Organización Mundial de la Salud, ofrece un abordaje integral y actualizado para el manejo clínico de la difteria, una infección bacteriana grave. Contiene protocolos claros para la identificación temprana, tratamiento efectivo y estrategias de prevención que buscan reducir la morbilidad y mortalidad asociadas a esta enfermedad potencialmente letal. Ideal para profesionales de la salud que buscan asegurar una atención óptima basada en evidencia internacional.",
+      "Date_publication": "2024-02-01"
+    },
+    {
+      "title": "Diagnóstico, tratamiento y atención de la meningitis",
+      "area": "Neurología / Infecciones",
+      "url_pdf": "./Pdfs/meningitis.pdf",
+      "image": "./Frontend/src/assets/img/icons/brain_anatomi.png",
+      "description": "Este documento proporciona recomendaciones prácticas y detalladas para el diagnóstico oportuno y manejo clínico de la meningitis, una inflamación peligrosa de las membranas cerebrales. Incluye guías para el tratamiento adecuado, monitoreo del paciente y cuidados especializados que pueden marcar la diferencia en el pronóstico. Es una herramienta esencial para médicos, enfermeros y equipos clínicos que enfrentan esta emergencia neurológica.",
+      "Date_publication": "2023-09-15"
+    },
+    {
+      "title": "Práctica clínica para el manejo de la influenza",
+      "area": "Infecciones respiratorias",
+      "url_pdf": "./Pdfs/clinical-guidelines-for-influenza.pdf",
+      "image": "./Frontend/src/assets/img/icons/bacterys_illustration.png",
+      "description": "Con un enfoque preventivo y terapéutico, esta guía clínica ofrece un marco completo para la prevención, diagnóstico y tratamiento de la influenza. Detalla estrategias para minimizar la transmisión, así como recomendaciones sobre el manejo de casos leves y severos. Es un recurso indispensable para profesionales en el ámbito de la salud respiratoria que buscan mejorar la respuesta clínica frente a esta enfermedad estacional y altamente contagiosa.",
+      "Date_publication": "2023-11-30"
+    },
+    {
+      "title": "Guía consolidada sobre VIH",
+      "area": "VIH / Infecciones crónicas",
+      "url_pdf": "./Pdfs/VIH.pdf",
+      "image": "./Frontend/src/assets/img/icons/VIH.png",
+      "description": "Esta guía integral abarca todos los aspectos cruciales del VIH, desde la prevención y diagnóstico hasta el tratamiento y monitoreo continuo de los pacientes. Está diseñada para apoyar a los profesionales de la salud en la atención de personas con VIH, promoviendo prácticas basadas en evidencia para mejorar la calidad de vida y controlar la infección. Un recurso clave para enfrentar los retos del VIH en la actualidad.",
+      "Date_publication": "2022-07-27"
+    },
+    {
+      "title": "Atención segura del aborto (2.ª edición)",
+      "area": "Salud reproductiva",
+      "url_pdf": "./Pdfs/Atención_segura_del_aborto.pdf",
+      "image": "./Frontend/src/assets/img/icons/abortion.png",
+      "description": "Esta edición actualizada brinda recomendaciones clínicas y normativas para asegurar una atención segura, respetuosa y de calidad en procedimientos de aborto. Aborda aspectos técnicos, éticos y legales, y enfatiza la importancia de la salud reproductiva integral de la mujer. Es una guía fundamental para profesionales de la salud comprometidos con la seguridad y los derechos de las pacientes en contextos sensibles.",
+      "Date_publication": "2022-03-09"
+    }
+  ]
 }
