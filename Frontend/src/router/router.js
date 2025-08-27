@@ -18,6 +18,10 @@ function router() {
   // Renderiza la vista
   document.getElementById("app").innerHTML = route.default();
 
+  if (typeof route.initCalculator === "function") {
+    route.initCalculator();
+  }
+
   // Cambia el H3
   const pageTitle = document.getElementById("page-title");
   if (pageTitle) pageTitle.textContent = route.title || "BAYMED";
