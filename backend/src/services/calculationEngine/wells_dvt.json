@@ -1,0 +1,22 @@
+{
+  "key": "wells_dvt",
+  "name": "Wells Score for DVT",
+  "type": "categorical",
+  "fields": [
+    { "name": "cancer", "label": "Active cancer", "points": 1 },
+    { "name": "paralysis", "label": "Paralysis, paresis, or recent plaster immobilization of the lower extremities", "points": 1 },
+    { "name": "bedridden", "label": "Recently bedridden >3 days or major surgery within 12 weeks", "points": 1 },
+    { "name": "tenderness", "label": "Localized tenderness along deep venous system", "points": 1 },
+    { "name": "swelling_entire_leg", "label": "Swelling of entire leg", "points": 1 },
+    { "name": "calf_swelling", "label": "Calf swelling >3 cm compared to asymptomatic leg", "points": 1 },
+    { "name": "pitting_edema", "label": "Pitting edema confined to symptomatic leg", "points": 1 },
+    { "name": "collateral_veins", "label": "Collateral superficial veins (nonvaricose)", "points": 1 },
+    { "name": "alternative_dx", "label": "Alternative diagnosis at least as likely as DVT", "points": -2 }
+  ],
+  "interpretation": {
+    "low": { "range": "≤0", "description": "Low probability" },
+    "moderate": { "range": "1–2", "description": "Moderate probability" },
+    "high": { "range": "≥3", "description": "High probability" }
+  },
+  "reference": "Wells PS, Anderson DR, Rodger M, Ginsberg JS, Kearon C, Gent M, Turpie AG, Bormanis J, Weitz J, Chamberlain M, Bowie D, Barnes D, Hirsh J. Derivation of a simple clinical model to categorize patients' probability of pulmonary embolism: increasing the models utility with the SimpliRED D-dimer. Thromb Haemost. 2000 Mar;83(3):416-20. PMID: 10744147"
+}

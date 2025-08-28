@@ -1,0 +1,28 @@
+{
+  "key": "cha2ds2_vasc",
+  "name": "CHA₂DS₂-VASc Score",
+  "type": "categorical",
+  "fields": [
+    { "name": "congestive_heart_failure", "label": "Congestive heart failure", "points": 1 },
+    { "name": "hypertension", "label": "Hypertension", "points": 1 },
+    { "name": "age_75", "label": "Age ≥75 years", "points": 2 },
+    { "name": "diabetes", "label": "Diabetes mellitus", "points": 1 },
+    { "name": "stroke_tia", "label": "Prior stroke/TIA/thromboembolism", "points": 2 },
+    { "name": "vascular_disease", "label": "Vascular disease (MI, PAD, aortic plaque)", "points": 1 },
+    { "name": "age_65_74", "label": "Age 65–74 years", "points": 1 },
+    { "name": "sex_female", "label": "Sex category (female)", "points": 1 }
+  ],
+  "interpretation": {
+    "male": {
+      "0": "Low risk – no anticoagulation",
+      "1": "Intermediate risk – consider anticoagulation",
+      "≥2": "High risk – recommend anticoagulation"
+    },
+    "female": {
+      "1": "Low risk – no anticoagulation",
+      "2": "Intermediate risk – consider anticoagulation",
+      "≥3": "High risk – recommend anticoagulation"
+    }
+  },
+  "reference": "Lip GY, Nieuwlaat R, Pisters R, Lane DA, Crijns HJ. Refining clinical risk stratification for predicting stroke and thromboembolism in atrial fibrillation using a novel risk factor-based approach: the euro heart survey on atrial fibrillation. Chest. 2010 Feb;137(2):263-72. doi:10.1378/chest.09-1584"
+}

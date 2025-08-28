@@ -1,0 +1,22 @@
+{
+  "key": "has_bled",
+  "name": "HAS-BLED Score",
+  "type": "categorical",
+  "fields": [
+    { "name": "hypertension", "label": "Hypertension (SBP >160 mmHg)", "points": 1 },
+    { "name": "renal_disease", "label": "Renal disease (dialysis, transplant, Cr >2.26 mg/dL)", "points": 1 },
+    { "name": "liver_disease", "label": "Liver disease (cirrhosis, bilirubin >2x + enzymes >3x)", "points": 1 },
+    { "name": "stroke_history", "label": "History of stroke", "points": 1 },
+    { "name": "bleeding", "label": "History of bleeding", "points": 1 },
+    { "name": "labile_inr", "label": "Labile INR", "points": 1 },
+    { "name": "elderly", "label": "Age >65 years", "points": 1 },
+    { "name": "drugs", "label": "Drugs (antiplatelets, NSAIDs)", "points": 1 },
+    { "name": "alcohol", "label": "Alcohol use ≥8 drinks/week", "points": 1 }
+  ],
+  "interpretation": {
+    "low": { "range": "0–1", "description": "Low risk" },
+    "moderate": { "range": "2", "description": "Moderate risk" },
+    "high": { "range": "≥3", "description": "High risk of bleeding" }
+  },
+  "reference": "Pisters R, Lane DA, Nieuwlaat R, de Vos CB, Crijns HJ, Lip GY. A novel user-friendly score to assess 1-year risk of major bleeding in atrial fibrillation patients: the HAS-BLED score. Chest. 2010 Nov;138(5):1093-100. doi:10.1378/chest.10-0134"
+}

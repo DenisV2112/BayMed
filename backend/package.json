@@ -1,0 +1,25 @@
+{
+  "name": "medapp-backend",
+  "version": "0.1.0",
+  "description": "Backend para aplicación médica con escalas cargadas dinámicamente desde JSON",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "seed": "node src/seeds/seedScales.js"
+  },
+  "author": "Johan",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "mongoose": "^6.0.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "keywords": []
+}

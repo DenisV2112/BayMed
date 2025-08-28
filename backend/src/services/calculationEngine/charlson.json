@@ -1,0 +1,66 @@
+{
+  "key": "CHARLSON",
+  "name": "Charlson Comorbidity Index",
+  "type": "table_based",
+  "description": "Índice que cuantifica comorbilidades mediante puntajes ponderados para estimar mortalidad a 1 y 10 años.",
+  "fields": [
+    { "id": "myocardial_infarction", "label": "Myocardial infarction", "type": "boolean" },
+    { "id": "congestive_heart_failure", "label": "Congestive heart failure", "type": "boolean" },
+    { "id": "peripheral_vascular_disease", "label": "Peripheral vascular disease", "type": "boolean" },
+    { "id": "cerebrovascular_disease", "label": "Cerebrovascular disease", "type": "boolean" },
+    { "id": "dementia", "label": "Dementia", "type": "boolean" },
+    { "id": "chronic_pulmonary_disease", "label": "Chronic pulmonary disease", "type": "boolean" },
+    { "id": "connective_tissue_disease", "label": "Connective tissue disease", "type": "boolean" },
+    { "id": "peptic_ulcer", "label": "Peptic ulcer disease", "type": "boolean" },
+    { "id": "mild_liver_disease", "label": "Mild liver disease", "type": "boolean" },
+    { "id": "diabetes", "label": "Diabetes (no end-organ damage)", "type": "boolean" },
+    { "id": "diabetes_end_organ", "label": "Diabetes with end organ damage", "type": "boolean" },
+    { "id": "hemiplegia", "label": "Hemiplegia", "type": "boolean" },
+    { "id": "moderate_severe_renal", "label": "Moderate or severe renal disease", "type": "boolean" },
+    { "id": "any_tumor", "label": "Any tumor (without metastasis)", "type": "boolean" },
+    { "id": "leukemia", "label": "Leukemia", "type": "boolean" },
+    { "id": "lymphoma", "label": "Lymphoma", "type": "boolean" },
+    { "id": "moderate_severe_liver", "label": "Moderate or severe liver disease", "type": "boolean" },
+    { "id": "metastatic_solid_tumor", "label": "Metastatic solid tumor", "type": "boolean" },
+    { "id": "aids", "label": "AIDS/HIV", "type": "boolean" }
+  ],
+  "scoring": {
+    "myocardial_infarction": 1,
+    "congestive_heart_failure": 1,
+    "peripheral_vascular_disease": 1,
+    "cerebrovascular_disease": 1,
+    "dementia": 1,
+    "chronic_pulmonary_disease": 1,
+    "connective_tissue_disease": 1,
+    "peptic_ulcer": 1,
+    "mild_liver_disease": 1,
+    "diabetes": 1,
+    "diabetes_end_organ": 2,
+    "hemiplegia": 2,
+    "moderate_severe_renal": 2,
+    "any_tumor": 2,
+    "leukemia": 2,
+    "lymphoma": 2,
+    "moderate_severe_liver": 3,
+    "metastatic_solid_tumor": 6,
+    "aids": 6
+  },
+  "interpretation": {
+    "one_year_mortality": [
+      { "min": 0, "max": 0, "mortality": "≈12%" },
+      { "min": 1, "max": 2, "mortality": "≈26%" },
+      { "min": 3, "max": 4, "mortality": "≈52%" },
+      { "min": 5, "max": 100, "mortality": "≈85%" }
+    ],
+    "notes": "Las cifras de mortalidad son aproximadas según tablas publicadas en el estudio original; usar como guía."
+  },
+  "references": [
+    {
+      "title": "A new method of classifying prognostic comorbidity in longitudinal studies: development and validation.",
+      "authors": "Charlson ME et al.",
+      "journal": "Journal of Chronic Diseases",
+      "year": 1987,
+      "pmid": "3558716"
+    }
+  ]
+}

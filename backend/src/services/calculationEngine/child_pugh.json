@@ -1,0 +1,58 @@
+{
+  "key": "child_pugh",
+  "name": "Child-Pugh Score",
+  "type": "categorical",
+  "fields": [
+    {
+      "name": "encephalopathy",
+      "label": "Hepatic encephalopathy",
+      "options": {
+        "None": 1,
+        "Grade I-II (or suppressed)": 2,
+        "Grade III-IV (or refractory)": 3
+      }
+    },
+    {
+      "name": "ascites",
+      "label": "Ascites",
+      "options": {
+        "None": 1,
+        "Mild/moderate (diuretic controlled)": 2,
+        "Severe/refractory": 3
+      }
+    },
+    {
+      "name": "bilirubin",
+      "label": "Bilirubin (mg/dL)",
+      "ranges": [
+        { "min": 0, "max": 2, "points": 1 },
+        { "min": 2, "max": 3, "points": 2 },
+        { "min": 3, "points": 3 }
+      ]
+    },
+    {
+      "name": "albumin",
+      "label": "Albumin (g/dL)",
+      "ranges": [
+        { "min": 3.5, "points": 1 },
+        { "min": 2.8, "max": 3.5, "points": 2 },
+        { "max": 2.8, "points": 3 }
+      ]
+    },
+    {
+      "name": "inr",
+      "label": "INR",
+      "ranges": [
+        { "max": 1.7, "points": 1 },
+        { "min": 1.7, "max": 2.3, "points": 2 },
+        { "min": 2.3, "points": 3 }
+      ]
+    }
+  ],
+  "interpretation": {
+    "classA": { "range": "5–6", "description": "Well-compensated disease" },
+    "classB": { "range": "7–9", "description": "Significant functional compromise" },
+    "classC": { "range": "10–15", "description": "Decompensated disease" }
+  },
+  "reference": "Pugh RN, Murray-Lyon IM, Dawson JL, Pietroni MC, Williams R. Transection of the oesophagus for bleeding oesophageal varices. Br J Surg. 1973 Aug;60(8):646-9. doi:10.1002/bjs.1800600817"
+}

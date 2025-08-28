@@ -1,0 +1,51 @@
+{
+  "key": "GLASGOW",
+  "name": "Glasgow Coma Scale",
+  "type": "table_based",
+  "description": "Escala para evaluar nivel de conciencia (componente ocular, verbal y motor).",
+  "fields": [
+    { "id": "eye", "label": "Eye opening", "type": "categorical", "options": ["Spontaneous","To speech","To pain","No response"] },
+    { "id": "verbal", "label": "Verbal response", "type": "categorical", "options": ["Oriented","Confused","Inappropriate words","Incomprehensible sounds","No response"] },
+    { "id": "motor", "label": "Motor response", "type": "categorical", "options": ["Obeys commands","Localizes pain","Withdraws from pain","Flexion (decorticate)","Extension (decerebrate)","No response"] }
+  ],
+  "scoring": {
+    "eye": [
+      { "value": "Spontaneous", "points": 4 },
+      { "value": "To speech", "points": 3 },
+      { "value": "To pain", "points": 2 },
+      { "value": "No response", "points": 1 }
+    ],
+    "verbal": [
+      { "value": "Oriented", "points": 5 },
+      { "value": "Confused", "points": 4 },
+      { "value": "Inappropriate words", "points": 3 },
+      { "value": "Incomprehensible sounds", "points": 2 },
+      { "value": "No response", "points": 1 }
+    ],
+    "motor": [
+      { "value": "Obeys commands", "points": 6 },
+      { "value": "Localizes pain", "points": 5 },
+      { "value": "Withdraws from pain", "points": 4 },
+      { "value": "Flexion (decorticate)", "points": 3 },
+      { "value": "Extension (decerebrate)", "points": 2 },
+      { "value": "No response", "points": 1 }
+    ]
+  },
+  "interpretation": {
+    "ranges": [
+      { "min": 3, "max": 8, "meaning": "Coma grave" },
+      { "min": 9, "max": 12, "meaning": "Lesión moderada" },
+      { "min": 13, "max": 15, "meaning": "Lesión leve o normal" }
+    ]
+  },
+  "references": [
+    {
+      "title": "Assessment of coma and impaired consciousness. A practical scale.",
+      "authors": "Teasdale G, Jennett B.",
+      "journal": "Lancet",
+      "year": 1974,
+      "pmid": "4136544",
+      "doi": "10.1016/S0140-6736(74)91639-0"
+    }
+  ]
+}
