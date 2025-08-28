@@ -1,0 +1,69 @@
+{
+  "key": "SOFA",
+  "name": "SOFA",
+  "type": "table_based",
+  "description": "Sepsis-related Organ Failure Assessment - evalúa disfunción orgánica en 6 sistemas (respiratorio, coagulación, hepático, cardiovascular, neurológico, renal).",
+  "fields": [
+    { "id": "paO2_fio2", "label": "PaO2/FiO2 (mmHg)", "type": "number" },
+    { "id": "platelets", "label": "Platelets (10^3/µL)", "type": "number" },
+    { "id": "bilirubin", "label": "Bilirubin (mg/dL)", "type": "number" },
+    { "id": "map_or_vasopressors", "label": "MAP or vasopressor support", "type": "categorical" },
+    { "id": "gcs", "label": "Glasgow Coma Scale", "type": "number" },
+    { "id": "creatinine_or_urine", "label": "Creatinine (mg/dL) or urine output", "type": "number" }
+  ],
+  "scoring": {
+    "respiratory_paO2_fio2": [
+      { "min": -10000, "max": 100, "points": 4 },
+      { "min": 101, "max": 200, "points": 3 },
+      { "min": 201, "max": 300, "points": 2 },
+      { "min": 301, "max": 400, "points": 1 },
+      { "min": 401, "max": 10000, "points": 0 }
+    ],
+    "platelets": [
+      { "min": -10000, "max": 20, "points": 4 },
+      { "min": 21, "max": 49, "points": 3 },
+      { "min": 50, "max": 99, "points": 2 },
+      { "min": 100, "max": 149, "points": 1 },
+      { "min": 150, "max": 1000000, "points": 0 }
+    ],
+    "bilirubin": [
+      { "min": -10000, "max": 5.9, "points": 4 },
+      { "min": 6.0, "max": 11.9, "points": 3 },
+      { "min": 12.0, "max": 19.9, "points": 2 },
+      { "min": 2.0, "max": 5.9, "points": 1 },
+      { "min": 0, "max": 1.9, "points": 0 }
+    ],
+    "map_or_vasopressors": [
+      { "id": "dopamine>15 or norepinephrine>0.1", "points": 4 },
+      { "id": "dopamine 5-15 or dobutamine any dose", "points": 2 },
+      { "id": "dopamine <5 or norepinephrine <=0.1", "points": 1 },
+      { "id": "no vasopressors", "points": 0 }
+    ],
+    "gcs": [
+      { "min": 0, "max": 5, "points": 4 },
+      { "min": 6, "max": 8, "points": 3 },
+      { "min": 9, "max": 11, "points": 2 },
+      { "min": 12, "max": 13, "points": 1 },
+      { "min": 14, "max": 15, "points": 0 }
+    ],
+    "creatinine": [
+      { "min": -10000, "max": 5.0, "points": 4 },
+      { "min": 3.5, "max": 3.9, "points": 3 },
+      { "min": 2.0, "max": 3.4, "points": 2 },
+      { "min": 1.2, "max": 1.9, "points": 1 },
+      { "min": 0, "max": 1.1, "points": 0 }
+    ]
+  },
+  "interpretation": {
+    "notes": "Suma total de 0 a 24; incremento de puntuación durante la estancia se asocia a mayor mortalidad."
+  },
+  "references": [
+    {
+      "title": "The SOFA (Sepsis-related Organ Failure Assessment) score to describe organ dysfunction/failure.",
+      "authors": "Vincent JL et al.",
+      "journal": "Intensive Care Medicine",
+      "year": 1996,
+      "pmid": "8844239"
+    }
+  ]
+}

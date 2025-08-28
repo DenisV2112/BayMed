@@ -1,0 +1,39 @@
+{
+  "key": "MELD",
+  "name": "MELD",
+  "type": "formula_based",
+  "description": "Model for End-stage Liver Disease. Score utilizado para predecir mortalidad en enfermedad hepática avanzada y en la priorización de trasplantes.",
+  "fields": [
+    { "id": "serum_bilirubin_mg_dl", "label": "Serum bilirubin (mg/dL)", "type": "number" },
+    { "id": "serum_creatinine_mg_dl", "label": "Serum creatinine (mg/dL)", "type": "number" },
+    { "id": "INR", "label": "INR", "type": "number" }
+  ],
+  "scoring": {
+    "formula": "MELD = 3.78 * ln(bilirubin) + 11.2 * ln(INR) + 9.57 * ln(creatinine) + 6.43",
+    "notes": "Las variables con valor <1 se truncan a 1 para evitar ln < 0; MELD final suele redondearse. Versiones modernas incluyen sodio (MELD-Na)."
+  },
+  "interpretation": {
+    "examples": [
+      { "meld": 0, "three_month_mortality": "≈1.9%" },
+      { "meld_range": "10-19", "three_month_mortality": "≈6.0%" },
+      { "meld_range": "20-29", "three_month_mortality": "≈19.6%" },
+      { "meld_range": "30-39", "three_month_mortality": "≈52.6%" },
+      { "meld_range": "≥40", "three_month_mortality": "≈71.3%" }
+    ]
+  },
+  "references": [
+    {
+      "title": "A model to predict survival in patients with end-stage liver disease.",
+      "authors": "Malinchoc M, Kamath PS, Gordon FD, Peine CJ, Rank J, ter Borg PC.",
+      "journal": "Hepatology",
+      "year": 2000,
+      "pmid": "11172350"
+    },
+    {
+      "title": "MELD and allocation of donor livers.",
+      "authors": "Wiesner R, McDiarmid SV, et al.",
+      "journal": "Gastroenterology",
+      "year": 2003
+    }
+  ]
+}
