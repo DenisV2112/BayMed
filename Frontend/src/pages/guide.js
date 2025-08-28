@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-export default function Home() {
-  return `
-    <section>
-      <h1>Bienvenido a BAYMED</h1>
-      <p>Esta es la página de inicio.</p>
-    </section>
-  `;
-}
-
-export const title = "Inicio";
-=======
 export default function Guide() {
   const html = `
     <div class="px-6 pb-4 flex flex-col gap-6 bg-gray-100 min-h-screen rounded-2xl">
@@ -118,5 +106,3 @@ export default function Guide() {
   });
 }
 
-
->>>>>>> feature/backend_integration

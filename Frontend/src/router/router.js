@@ -17,10 +17,7 @@ function router() {
 
   // Renderiza la vista
   document.getElementById("app").innerHTML = route.default();
-<<<<<<< HEAD
-=======
   Guide.initGuidePage()
->>>>>>> feature/backend_integration
 
   // Cambia el H3
   const pageTitle = document.getElementById("page-title");

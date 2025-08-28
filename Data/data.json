@@ -20,5 +20,56 @@
         { "label": "Angina", "type": "checkbox", "min": 0, "max": 3 }
       ]
     }
-  ]
+  ],
+ "guides":[
+  {
+    "id": 1,
+    "title": "Cardiología",
+    "image": "./Frontend/src/assets/img/icons/heart.png",
+    "content": "Estudia las enfermedades del corazón y del sistema cardiovascular."
+  },
+  {
+    "id": 2,
+    "title": "Patología",
+    "image": "./Frontend/src/assets/img/icons/medical_tube_illustration.png",
+    "content": "Analiza las causas y efectos de enfermedades mediante muestras clínicas."
+  },
+  {
+    "id": 3,
+    "title": "Neurología",
+    "image": "./Frontend/src/assets/img/icons/brain_anatomi.png",
+    "content": "Se enfoca en el diagnóstico y tratamiento de trastornos del sistema nervioso."
+  },
+  {
+    "id": 4,
+    "title": "Histopatología",
+    "image": "./Frontend/src/assets/img/icons/mucroscope_illustration.webp",
+    "content": "Estudia los cambios en tejidos enfermos usando el microscopio."
+  },
+  {
+    "id": 5,
+    "title": "Gastroenterología",
+    "image": "./Frontend/src/assets/img/icons/pink_Intestinal_anatomy_illustration.png",
+    "content": "Especialidad médica centrada en el aparato digestivo y sus enfermedades."
+  },
+  {
+    "id": 6,
+    "title": "Bacteriología",
+    "image": "./Frontend/src/assets/img/icons/bacterys_illustration.png",
+    "content": "Rama de la microbiología que estudia las bacterias y sus efectos."
+  },
+  {
+    "id": 7,
+    "title": "Oftalmología",
+    "image": "./Frontend/src/assets/img/icons/eye_illustration.webp",
+    "content": "Se dedica al estudio y tratamiento de enfermedades del ojo."
+  },
+  {
+    "id": 8,
+    "title": "Citopatología",
+    "image": "./Frontend/src/assets/img/icons/thermometer_illustration.webp",
+    "content": "Estudia las células para detectar enfermedades como el cáncer."
+  }
+]
+ 
 }
