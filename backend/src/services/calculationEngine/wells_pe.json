@@ -1,0 +1,26 @@
+{
+  "key": "wells_pe",
+  "name": "Wells Score for Pulmonary Embolism",
+  "type": "categorical",
+  "fields": [
+    { "name": "dvt_symptoms", "label": "Clinical signs of DVT", "points": 3 },
+    { "name": "pe_most_likely", "label": "PE more likely than alternative diagnosis", "points": 3 },
+    { "name": "hr_gt100", "label": "Heart rate >100 bpm", "points": 1.5 },
+    { "name": "immobilization", "label": "Immobilization ≥3 days or surgery within 4 weeks", "points": 1.5 },
+    { "name": "previous_dvt_pe", "label": "Previous DVT/PE", "points": 1.5 },
+    { "name": "hemoptysis", "label": "Hemoptysis", "points": 1 },
+    { "name": "cancer", "label": "Active cancer (treatment ongoing, within 6 months, or palliative)", "points": 1 }
+  ],
+  "interpretation": {
+    "twoTier": {
+      "low": { "range": "≤4", "description": "PE unlikely" },
+      "high": { "range": ">4", "description": "PE likely" }
+    },
+    "threeTier": {
+      "low": { "range": "0–1", "description": "Low probability" },
+      "moderate": { "range": "2–6", "description": "Moderate probability" },
+      "high": { "range": "≥7", "description": "High probability" }
+    }
+  },
+  "reference": "Wells PS, Anderson DR, Rodger M, Ginsberg JS, Kearon C, Gent M, Turpie AG, Bormanis J, Weitz J, Chamberlain M, Bowie D, Barnes D, Hirsh J. Excluding pulmonary embolism at the bedside without diagnostic imaging: management of patients with suspected pulmonary embolism presenting to the emergency department by using a simple clinical model and d-dimer. Ann Intern Med. 2001 Jul 17;135(2):98-107. doi:10.7326/0003-4819-135-2-200107170-00010"
+}
