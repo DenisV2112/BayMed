@@ -1,4 +1,3 @@
-
 export default function Guide() {
   const html = `
     <div class="px-6 pb-4 flex flex-col gap-6 bg-gray-100 min-h-screen rounded-2xl">
@@ -12,7 +11,6 @@ export default function Guide() {
 
             <!-- Category   -->
             <section>
-
                 <div class="flex justify-between mb-4">
                     <h2 class="text-2xl font-semibold text-gray-700 mb-2">Category</h2>
                     <!-- Search bar -->
@@ -23,19 +21,16 @@ export default function Guide() {
 
                 <!-- Card of category -->
                 <div id="guide_content" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 overflow-auto h-[58vh]">
-
-                    
                 </div>
             </section>
         </div>
     </div>
-
   `;
   
   return html
 }
 
-  export function initGuidePage() {
+export function initGuidePage() {
   const contentContainer = document.getElementById("guide_content");
   const modal = document.getElementById("guideModal");
   const modalTitle = document.getElementById("modalTitle");
@@ -62,7 +57,7 @@ export default function Guide() {
     });
 
   function renderCards(guides) {
-    contentContainer.innerHTML = ""; // Limpiar contenido previo
+    contentContainer.innerHTML = ""; 
     guides.forEach(guide => {
       const card = document.createElement("div");
       card.className = "bg-sky-400 rounded-xl p-4 flex flex-col items-center text-white font-bold text-center hover:shadow-lg cursor-pointer";
@@ -82,7 +77,7 @@ export default function Guide() {
     });
   }
 
-  // 🔍 Evento para búsqueda dinámica
+  // 🔍 Búsqueda dinámica
   searchInput.addEventListener("input", () => {
     const query = searchInput.value.toLowerCase();
     const filteredGuides = allGuides.filter(guide =>
@@ -91,7 +86,6 @@ export default function Guide() {
     renderCards(filteredGuides);
   });
 
-  // Cerrar modal
   closeModal.addEventListener("click", () => {
     modal.classList.add("hidden");
     modal.classList.remove("flex");

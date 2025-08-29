@@ -19,9 +19,8 @@ function router() {
   document.getElementById("app").innerHTML = route.default();
   Guide.initGuidePage()
 
-  if (typeof route.initCalculator === "function") {
-    route.initCalculator();
-  }
+if (typeof route.initGuidePage === "function") route.initGuidePage();
+if (typeof route.initCalculator === "function") route.initCalculator();
 
   // Cambia el H3
   const pageTitle = document.getElementById("page-title");
