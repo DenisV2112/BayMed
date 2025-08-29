@@ -34,6 +34,7 @@ export function initGuidePage() {
   const contentContainer = document.getElementById("guide_content");
   const modal = document.getElementById("guideModal");
   const modalTitle = document.getElementById("modalTitle");
+  const modalDescription = document.getElementById("modalDescription");
   const modalContent = document.getElementById("modalContent");
   const closeModal = document.getElementById("closeModal");
   const titleTop = document.getElementById("top_title");
@@ -68,9 +69,11 @@ export function initGuidePage() {
       card.addEventListener("click", () => {
         titleTop.textContent = `GUIDE/${guide.title}`;
         modalTitle.textContent = guide.title;
-        modalContent.textContent = guide.content;
+        modalDescription.textContent = guide.description;
+        modalContent.innerHTML = `
+          <iframe src="${guide.url_pdf}" class="w-full h-full" frameborder="0"></iframe>`;
         modal.classList.remove("hidden");
-        modal.classList.add("flex");
+        modal.classList.add("flex");  
       });
 
       contentContainer.appendChild(card);
