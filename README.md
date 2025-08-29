@@ -1,6 +1,5 @@
 # 🏥 BayMed — Medical Student Web Application
-
-Elevator pitch: BayMed is a lightweight, framework-free web application that centralizes clinical guides, standardized scales, and an interactive medical calculator for medical students. It focuses on clarity, speed, and reliability, using vanilla HTML/CSS/JavaScript on the front end and an optional Node.js micro-backend. The result is a deploy-anywhere, zero-install client that works on any modern browser, ideal for low-friction academic use.
+BayMed is a lightweight, framework-free web application that centralizes clinical guides, standardized scales, and an interactive medical calculator for medical students. It focuses on clarity, speed, and reliability, using vanilla HTML/CSS/JavaScript on the front end and an optional Node.js micro-backend. The result is a deploy-anywhere, zero-install client that works on any modern browser, ideal for low-friction academic use.
 
 
 ## Table of Contents
@@ -181,7 +180,7 @@ Optional route prefetch, lazy-load large illustrations.
 Modern browser; optional Node 18+ for backend.
 
 ## Frontend (Static)
-git clone https://github.com/<org>/BayMed.git
+git clone https://github.com/DenisV2112/BayMed.git
 cd BayMed/Frontend/src
 ### Option 1: open index.html directly
 ### Option 2: run a tiny dev server
