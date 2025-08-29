@@ -87,7 +87,7 @@ export default function Home() {
       <div class="lg:col-span-1 bg-white p-6 rounded-2xl shadow">
   <div class="flex justify-between items-center mb-6">
     <h2 class="font-semibold text-2xl">Documents</h2>
-    <a class="text-lg text-blue-600 hover:underline" href="#">View all</a>
+    <a class="text-lg text-blue-600 hover:underline" href="#/guide">View all</a>
   </div>
 
   <!-- Responsive grid -->
