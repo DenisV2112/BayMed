@@ -1,2 +1,16 @@
-/node_modules
-/.envChatBot
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Env files
+.env
+.env.local
+
+# Logs
+logs
+*.log
+
+# Dist / Build
+frontend/dist
+backend/dist

@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Baloo";
+  src: url("/fonts/Baloo_2/Baloo2-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Space_Mono";
+  src: url("/fonts/Space_Mono/SpaceMono-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cranberry";
+  src: url("/fonts/cranberry/Cranberry.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cranberry";
+  src: url("/fonts/BarlowCondensed-Bold.ttf") format("truetype");
+}

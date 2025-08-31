@@ -5,7 +5,8 @@ const cors = require('cors');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
-const scaleRoutes = require('./routes/scaleRoutes');
+const scaleRoutes = require('/routes/scaleRoutes');
+const guideRoutes = require('/routes/guideRoutes');
 
 const app = express();
 
@@ -16,6 +17,9 @@ app.use(bodyParser.json({ limit: '10mb' }));
 
 // Rutas
 app.use('/api/scales', scaleRoutes);
+
+app.use('/api/guides', guideRoutes);
+
 
 app.get('/', (req, res) => {
   res.json({ ok: true, message: 'MedApp Backend - API de escalas' });
