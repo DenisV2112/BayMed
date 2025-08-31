@@ -14,3 +14,4 @@ logs
 # Dist / Build
 frontend/dist
 backend/dist
+".env" 
