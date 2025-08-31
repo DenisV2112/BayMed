@@ -1,11 +1,10 @@
 export default function Home() {
   return `
-     <header class=" flex flex-col lg:flex-row justify-between items-center mb-4">
-
-      <div></div>
-      <h1 id="page-title" class="text-4xl lg:text-6xl font-bold mb-4 lg:mb-0">BAYMED</h1>
-      <div class="w-10 text-right">Sol</div>
-    </header>
+   <header class="flex justify-center items-center mb-4">
+  <h1 id="page-title" class="text-4xl lg:text-6xl font-bold text-center">
+    BAYMED
+  </h1>
+</header>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 flex-1 mr-0 lg:mr-[4vw]">
       
@@ -13,7 +12,7 @@ export default function Home() {
       <div class="bg-white p-6 rounded-2xl shadow flex justify-center items-center">
         <div class="relative w-48 h-48 sm:w-64 sm:h-64">
           <div class="absolute inset-0 bg-red-100 rounded-full animate-ping opacity-50"></div>
-          <img alt="Anatomical heart illustration" class="w-full h-full object-contain animate-pulse-heart" src="./ChatGPT Image 20 ago 2025, 20_30_23.png"/>
+          <img alt="Anatomical heart illustration" class="w-full h-full object-contain animate-pulse-heart" src="/src/assets/img/icons/heart.png"/>
         </div>
       </div>
 

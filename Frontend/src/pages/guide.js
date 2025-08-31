@@ -6,7 +6,7 @@ export default function Guide() {
         <div class="rounded-xl bg-white h-full w-full ">
             <!-- Top Image -->
             <div class="w-full rounded-xl overflow-hidden">
-                <img src="./Frontend/src/assets/img/icons/top_image.webp" class="w-full h-40 object-cover mb-4" />
+                <img src="/src/assets/img/icons/top_image.webp" class="w-full h-40 object-cover mb-4" />
             </div>
 
             <!-- Category   -->
@@ -47,7 +47,7 @@ export function initGuidePage() {
 
   let allGuides = [];
 
-  fetch('./Data/data.json')
+  fetch('/Data/data.json')
     .then(response => response.json())
     .then(data => {
       allGuides = data.guides;
