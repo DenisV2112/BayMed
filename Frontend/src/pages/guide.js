@@ -69,7 +69,7 @@ export function initGuidePage() {
 
   let allGuides = [];
 
-  fetch('/Data/data.json')
+  fetch('https://baymed-llct.onrender.com/api/guides')
     .then(response => response.json())
     .then(data => {
       allGuides = data.guides;

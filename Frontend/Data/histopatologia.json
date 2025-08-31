@@ -1,8 +1,0 @@
-{
-  "title": "International Histological Classification of Tumours",
-  "area": "Histopatología",
-  "url_pdf": "https://apps.who.int/iris/bitstream/10665/41533/1/9241760109_eng.pdf",
-  "image": "./src/assets/img/icons/mucroscope_illustration.webp",
-  "description": "Guía esencial para la clasificación histológica de tumores a nivel internacional, base fundamental para el diagnóstico en patología tumoral.",
-  "Date_publication": "1976-01-01"
-}
