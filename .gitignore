@@ -4,8 +4,13 @@ npm-debug.log
 yarn-error.log
 
 # Env files
+*.env
+*.env.*
 .env
 .env.local
+.env.production
+.env.development
+.env.test
 
 # Logs
 logs
@@ -14,4 +19,3 @@ logs
 # Dist / Build
 frontend/dist
 backend/dist
-".env" 
