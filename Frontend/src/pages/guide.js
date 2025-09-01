@@ -28,17 +28,12 @@ export default function Guide() {
         <div class="rounded-xl bg-white h-full w-full ">
             <!-- Top Image -->
             <div class="w-full rounded-xl overflow-hidden">
-                <img src="/src/assets/img/icons/top_image.webp" class="w-full h-40 object-cover mb-4" />
+                <img src="/src/assets/img/icons/bg_guide_img.png" class="w-full h-40 object-cover mb-4" />
             </div>
 
             <!-- Category   -->
             <section>
-                <div class="flex justify-between mb-4">
-                    <h2 class="text-2xl font-semibold text-gray-700 mb-2">Category</h2>
-                    <!-- Search bar -->
-                    <input id="guide_search" type="text" placeholder="Search"
-                        class="w-40 px-4 py-1 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-80 " />
-                </div>
+        
                 <div class="border-b border-gray-400 mb-6 mx-3"></div>
 
                 <!-- Card of category -->
@@ -59,7 +54,7 @@ export function initGuidePage() {
   const modalDescription = document.getElementById("modalDescription");
   const modalContent = document.getElementById("modalContent");
   const closeModal = document.getElementById("closeModal");
-  const titleTop = document.getElementById("top_title");
+  const titleTop = document.getElementById("page-title");
   const searchInput = document.getElementById("guide_search");
 
   if (!contentContainer) {
@@ -70,37 +65,41 @@ export function initGuidePage() {
   let allGuides = [];
 
   fetch('https://baymed-llct.onrender.com/api/guides')
-    .then(response => response.json())
-    .then(data => {
-      allGuides = data.guides;
-      renderCards(allGuides);
-    })
-    .catch(error => {
-      console.error("Error al cargar el JSON:", error);
-    });
+.then(res => res.json())
+  .then(json => {
+    const guides = json.data;
+    renderCards(guides);
+  })
+  .catch(err => console.error("Error al cargar el JSON:", err));
 
-  function renderCards(guides) {
-    contentContainer.innerHTML = ""; 
-    guides.forEach(guide => {
-      const card = document.createElement("div");
-      card.className = "bg-sky-400 rounded-xl p-4 flex flex-col items-center text-white font-bold text-center hover:shadow-lg cursor-pointer";
-      card.innerHTML = `
-        <img src="${guide.image}" alt="${guide.title}" class="h-50 mb-2 md:h-60 " />
-        ${guide.title}
-      `;
-      card.addEventListener("click", () => {
-        titleTop.textContent = `GUIDE/${guide.title}`;
-        modalTitle.textContent = guide.title;
-        modalDescription.textContent = guide.description;
-        modalContent.innerHTML = `
-          <iframe src="${guide.url_pdf}" class="w-full h-full" frameborder="0"></iframe>`;
-        modal.classList.remove("hidden");
-        modal.classList.add("flex");  
-      });
-
-      contentContainer.appendChild(card);
-    });
+function renderCards(guides) {
+  if (!Array.isArray(guides)) {
+    console.error("Se esperaba un array, pero llegó:", guides);
+    return;
   }
+
+  contentContainer.innerHTML = ""; 
+  guides.forEach(guide => {
+    const card = document.createElement("div");
+    card.className = "bg-sky-400 rounded-xl p-4 flex flex-col items-center text-white font-bold text-center hover:shadow-lg cursor-pointer";
+    card.innerHTML = `
+      <img src="${guide.image}" alt="${guide.area}" class="h-50 mb-2 md:h-60 " />
+      ${guide.title}
+    `;
+    card.addEventListener("click", () => {
+      titleTop.textContent = `GUIDE/${guide.title}`;
+      modalTitle.textContent = guide.title;
+      modalDescription.textContent = guide.description;
+      modalContent.innerHTML = `
+        <iframe src="${guide.url_pdf}" class="w-full h-full" frameborder="0"></iframe>`;
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");  
+    });
+
+    contentContainer.appendChild(card);
+  });
+}
+
 
   // 🔍 Búsqueda dinámica
   searchInput.addEventListener("input", () => {

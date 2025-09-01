@@ -174,7 +174,7 @@ function renderScale(scaleKey, scaleDef, content) {
       }
     });
 
-    fetch(`http://localhost:3000/api/scales/${scaleKey}/calculate`, {
+    fetch(`https://baymed-llct.onrender.com/api/scales/${scaleKey}/calculate`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(inputs),
